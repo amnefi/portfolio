@@ -1,4 +1,3 @@
-import { title } from 'framer-motion/client';
 import { useState } from 'react';
 
 const Projects = () => {
@@ -47,6 +46,50 @@ const Projects = () => {
         'Catálogo de productos con filtros y búsqueda.',
         'Carrito de compras con pasarela de pagos.',
         'Gestión de productos y categorías.',
+        'Panel de control para administradores.',
+      ],
+      technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
+    },
+    {
+      title: 'Blog - Blog de Tecnología',
+      description:
+        'Blog de tecnología con publicación de artículos y comentarios. Incluye gestión de usuarios, roles y permisos, con panel de control para administradores y reportes de interacciones.',
+      image: 'src/assets/images/BlogTecnologia/BlogTecnologia-3.png',
+      images: [
+        'src/assets/images/BlogTecnologia/BlogTecnologia-1.png',
+        'src/assets/images/BlogTecnologia/BlogTecnologia-2.png',
+        'src/assets/images/BlogTecnologia/BlogTecnologia-3.png',
+        'src/assets/images/BlogTecnologia/BlogTecnologia-4.png',
+        'src/assets/images/BlogTecnologia/BlogTecnologia-5.png',
+        'src/assets/images/BlogTecnologia/BlogTecnologia-6.png',
+        'src/assets/images/BlogTecnologia/BlogTecnologia-7.png',
+      ],
+      features: [
+        'Publicación de artículos y comentarios.',
+        'Gestión de usuarios, roles y permisos.',
+        'Panel de control para administradores.',
+        'Reportes de interacciones y comentarios.',
+      ],
+      technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
+    },
+    {
+      title: 'Red Social - Red de Amigos',
+      description:
+        'Red social de amigos con publicación de estados y fotos. Incluye gestión de perfiles, solicitudes de amistad y mensajes privados, con panel de control para administradores y reportes de interacciones.',
+      image: 'src/assets/images/RedAmigos/RedAmigos-3.png',
+      images: [
+        'src/assets/images/RedAmigos/RedAmigos-1.png',
+        'src/assets/images/RedAmigos/RedAmigos-2.png',
+        'src/assets/images/RedAmigos/RedAmigos-3.png',
+        'src/assets/images/RedAmigos/RedAmigos-4.png',
+        'src/assets/images/RedAmigos/RedAmigos-5.png',
+        'src/assets/images/RedAmigos/RedAmigos-6.png',
+        'src/assets/images/RedAmigos/RedAmigos-7.png',
+      ],
+      features: [
+        'Publicación de estados y fotos.',
+        'Gestión de perfiles y solicitudes de amistad.',
+        'Mensajes privados y notificaciones en tiempo real.',
         'Panel de control para administradores.',
       ],
       technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
