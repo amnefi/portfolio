@@ -10,15 +10,15 @@ const Projects = () => {
       title: 'Sistema de Gestión - Dakar G',
       description:
         'Sistema interno desarrollado para Dakar G, empresa dedicada a estructuras metálicas y trabajos industriales. Incluye gestión de trabajadores, proveedores, ventas y trabajos pendientes, con panel de métricas y reportes en tiempo real.',
-      image: 'src/assets/images/DakarG/DakarG-3.png',
+      image: '/assets/images/DakarG/DakarG-3.png',
       images: [
-        'src/assets/images/DakarG/DakarG-1.png',
-        'src/assets/images/DakarG/DakarG-2.png',
-        'src/assets/images/DakarG/DakarG-3.png',
-        'src/assets/images/DakarG/DakarG-4.png',
-        'src/assets/images/DakarG/DakarG-5.png',
-        'src/assets/images/DakarG/DakarG-6.png',
-        'src/assets/images/DakarG/DakarG-7.png',
+        '/assets/images/DakarG/DakarG-1.png',
+        '/assets/images/DakarG/DakarG-2.png',
+        '/assets/images/DakarG/DakarG-3.png',
+        '/assets/images/DakarG/DakarG-4.png',
+        '/assets/images/DakarG/DakarG-5.png',
+        '/assets/images/DakarG/DakarG-6.png',
+        '/assets/images/DakarG/DakarG-7.png',
       ],
       features: [
         'Dashboard interactivo con métricas clave.',
@@ -32,15 +32,15 @@ const Projects = () => {
       title: 'E-commerce - Tienda de Ropa',
       description:
         'Tienda virtual de ropa con carrito de compras y pasarela de pagos. Incluye gestión de productos, categorías y pedidos, con panel de control para administradores y reportes de ventas.',
-      image: 'src/assets/images/TiendaRopa/TiendaRopa-3.png',
+      image: '/assets/images/TiendaRopa/TiendaRopa-3.png',
       images: [
-        'src/assets/images/TiendaRopa/TiendaRopa-1.png',
-        'src/assets/images/TiendaRopa/TiendaRopa-2.png',
-        'src/assets/images/TiendaRopa/TiendaRopa-3.png',
-        'src/assets/images/TiendaRopa/TiendaRopa-4.png',
-        'src/assets/images/TiendaRopa/TiendaRopa-5.png',
-        'src/assets/images/TiendaRopa/TiendaRopa-6.png',
-        'src/assets/images/TiendaRopa/TiendaRopa-7.png',
+        '/assets/images/TiendaRopa/TiendaRopa-1.png',
+        '/assets/images/TiendaRopa/TiendaRopa-2.png',
+        '/assets/images/TiendaRopa/TiendaRopa-3.png',
+        '/assets/images/TiendaRopa/TiendaRopa-4.png',
+        '/assets/images/TiendaRopa/TiendaRopa-5.png',
+        '/assets/images/TiendaRopa/TiendaRopa-6.png',
+        '/assets/images/TiendaRopa/TiendaRopa-7.png',
       ],
       features: [
         'Catálogo de productos con filtros y búsqueda.',
@@ -54,15 +54,15 @@ const Projects = () => {
       title: 'Blog - Blog de Tecnología',
       description:
         'Blog de tecnología con publicación de artículos y comentarios. Incluye gestión de usuarios, roles y permisos, con panel de control para administradores y reportes de interacciones.',
-      image: 'src/assets/images/BlogTecnologia/BlogTecnologia-3.png',
+      image: '/assets/images/BlogTecnologia/BlogTecnologia-3.png',
       images: [
-        'src/assets/images/BlogTecnologia/BlogTecnologia-1.png',
-        'src/assets/images/BlogTecnologia/BlogTecnologia-2.png',
-        'src/assets/images/BlogTecnologia/BlogTecnologia-3.png',
-        'src/assets/images/BlogTecnologia/BlogTecnologia-4.png',
-        'src/assets/images/BlogTecnologia/BlogTecnologia-5.png',
-        'src/assets/images/BlogTecnologia/BlogTecnologia-6.png',
-        'src/assets/images/BlogTecnologia/BlogTecnologia-7.png',
+        '/assets/images/BlogTecnologia/BlogTecnologia-1.png',
+        '/assets/images/BlogTecnologia/BlogTecnologia-2.png',
+        '/assets/images/BlogTecnologia/BlogTecnologia-3.png',
+        '/assets/images/BlogTecnologia/BlogTecnologia-4.png',
+        '/assets/images/BlogTecnologia/BlogTecnologia-5.png',
+        '/assets/images/BlogTecnologia/BlogTecnologia-6.png',
+        '/assets/images/BlogTecnologia/BlogTecnologia-7.png',
       ],
       features: [
         'Publicación de artículos y comentarios.',
@@ -76,15 +76,15 @@ const Projects = () => {
       title: 'Red Social - Red de Amigos',
       description:
         'Red social de amigos con publicación de estados y fotos. Incluye gestión de perfiles, solicitudes de amistad y mensajes privados, con panel de control para administradores y reportes de interacciones.',
-      image: 'src/assets/images/RedAmigos/RedAmigos-3.png',
+      image: '/assets/images/RedAmigos/RedAmigos-3.png',
       images: [
-        'src/assets/images/RedAmigos/RedAmigos-1.png',
-        'src/assets/images/RedAmigos/RedAmigos-2.png',
-        'src/assets/images/RedAmigos/RedAmigos-3.png',
-        'src/assets/images/RedAmigos/RedAmigos-4.png',
-        'src/assets/images/RedAmigos/RedAmigos-5.png',
-        'src/assets/images/RedAmigos/RedAmigos-6.png',
-        'src/assets/images/RedAmigos/RedAmigos-7.png',
+        '/assets/images/RedAmigos/RedAmigos-1.png',
+        '/assets/images/RedAmigos/RedAmigos-2.png',
+        '/assets/images/RedAmigos/RedAmigos-3.png',
+        '/assets/images/RedAmigos/RedAmigos-4.png',
+        '/assets/images/RedAmigos/RedAmigos-5.png',
+        '/assets/images/RedAmigos/RedAmigos-6.png',
+        '/assets/images/RedAmigos/RedAmigos-7.png',
       ],
       features: [
         'Publicación de estados y fotos.',
@@ -94,6 +94,29 @@ const Projects = () => {
       ],
       technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
     },
+    {
+      title: 'Dashboard para medir el volumen de ventas y alcance de estas por el mundo',
+      description:
+        'Dashboard interactivo con métricas clave para la toma de decisiones en tiempo real. Incluye gráficos, tablas y mapas con filtros y segmentación de datos, con actualización automática desde la base de datos Nortwind usado para pruebas.',
+      image: '/assets/images/PowerBI/PowerBI-3.png',
+      images: [
+        '/assets/images/PowerBI/PowerBI-1.png',
+        '/assets/images/PowerBI/PowerBI-2.png',
+        '/assets/images/PowerBI/PowerBI-3.png',
+        '/assets/images/PowerBI/PowerBI-4.png',
+        '/assets/images/PowerBI/PowerBI-5.png',
+        '/assets/images/PowerBI/PowerBI-6.png',
+        '/assets/images/PowerBI/PowerBI-7.png',
+      ],
+      features: [
+        'Dashboard interactivo con métricas clave.',
+        'Gráficos, tablas y mapas con filtros.',
+        'Segmentación de datos y actualización automática.',
+        'Conexión a base de datos Nortwind para pruebas.',
+      ],
+      technologies: ['Power BI', 'SQL Server', 'SQL Server Management Studio'],
+
+    }
     
   ];
 
