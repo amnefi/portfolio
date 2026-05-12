@@ -1,78 +1,67 @@
-import { useState } from "react";
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { profile } from '../data/portfolio';
+
+const navItems = [
+  { label: 'Inicio', path: '/' },
+  { label: 'Sobre mí', path: '/about' },
+  { label: 'Servicios', path: '/services' },
+  { label: 'Skills', path: '/skills' },
+  { label: 'Proyectos', path: '/projects' },
+  { label: 'Contacto', path: '/contact' },
+];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const linkClass = ({ isActive }) =>
+    `rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+      isActive
+        ? 'bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-400/20'
+        : 'text-slate-200 hover:bg-white/10 hover:text-white'
+    }`;
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/10 backdrop-blur-md shadow-lg z-50 p-4">
-      {/* Contenedor general */}
-      <div className="container mx-auto flex items-center justify-between md:justify-center relative">
-        {/* Nombre centrado en móviles y oculto en desktop */}
-        <div className="text-lg font-bold text-gray-800 absolute left-1/2 -translate-x-1/2 md:hidden">
-          Nefi Avila
-        </div>
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <NavLink to="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
+          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-cyan-300 to-emerald-300 font-black text-slate-950">
+            NA
+          </span>
+          <span>
+            <span className="block text-sm font-bold leading-none text-white md:text-base">{profile.shortName}</span>
+            <span className="text-xs text-slate-400">Portfolio profesional</span>
+          </span>
+        </NavLink>
 
-        {/* Botón Hamburguesa solo en móviles */}
         <button
-          className="md:hidden text-gray-800 ml-auto"
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
+          className="rounded-xl border border-white/10 p-2 text-slate-200 md:hidden"
+          onClick={() => setMenuOpen((value) => !value)}
+          aria-label="Abrir menú de navegación"
         >
-          {menuOpen ? (
-            <i className="bi bi-x-lg text-2xl"></i>
-          ) : (
-            <i className="bi bi-list text-2xl"></i>
-          )}
+          <i className={`bi ${menuOpen ? 'bi-x-lg' : 'bi-list'} text-2xl`} />
         </button>
+
+        <nav className="hidden items-center gap-2 md:flex">
+          {navItems.map((item) => (
+            <NavLink key={item.path} to={item.path} className={linkClass}>
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
       </div>
 
-      {/* Navegación centrada siempre */}
-      <nav
-        className={`flex flex-col md:flex-row gap-4 items-center justify-center transition-all duration-300 ${
-          menuOpen ? "flex" : "hidden md:flex"
-        } mt-4 md:mt-0`}
-      >
-        <a
-          href="/"
-          className="text-gray-700 hover:text-green-500 transition-colors duration-300"
-        >
-          Inicio
-        </a>
-        <a
-          href="about"
-          className="text-gray-700 hover:text-green-500 transition-colors duration-300"
-        >
-          Acerca de mí
-        </a>
-        <a
-          href="skills"
-          className="text-gray-700 hover:text-green-500 transition-colors duration-300"
-        >
-          Habilidades
-        </a>
-        <a
-          href="projects"
-          className="text-gray-700 hover:text-green-500 transition-colors duration-300"
-        >
-          Proyectos
-        </a>
-        <a
-          href="services"
-          className="text-gray-700 hover:text-green-500 transition-colors duration-300"
-        >
-          Servicios
-        </a>
-        <a
-          href="contact"
-          className="text-gray-700 hover:text-green-500 transition-colors duration-300"
-        >
-          Contacto
-        </a>
-      </nav>
+      {menuOpen && (
+        <nav className="border-t border-white/10 bg-slate-950 px-5 py-4 md:hidden">
+          <div className="flex flex-col gap-2">
+            {navItems.map((item) => (
+              <NavLink key={item.path} to={item.path} className={linkClass} onClick={() => setMenuOpen(false)}>
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
   );
 };

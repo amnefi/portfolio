@@ -1,240 +1,133 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { projects } from '../data/portfolio';
 
-const Projects = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedImages, setSelectedImages] = useState(null);
-  const [expandedImage, setExpandedImage] = useState(null);
-
-  const projects = [
-    {
-      title: 'Sistema de Gestión - Dakar G',
-      description:
-        'Sistema interno desarrollado para Dakar G, empresa dedicada a estructuras metálicas y trabajos industriales. Incluye gestión de trabajadores, proveedores, ventas y trabajos pendientes, con panel de métricas y reportes en tiempo real.',
-      image: '/assets/images/DakarG/DakarG-3.png',
-      images: [
-        '/assets/images/DakarG/DakarG-1.png',
-        '/assets/images/DakarG/DakarG-2.png',
-        '/assets/images/DakarG/DakarG-3.png',
-        '/assets/images/DakarG/DakarG-4.png',
-        '/assets/images/DakarG/DakarG-5.png',
-        '/assets/images/DakarG/DakarG-6.png',
-        '/assets/images/DakarG/DakarG-7.png',
-      ],
-      features: [
-        'Dashboard interactivo con métricas clave.',
-        'Gestión de trabajadores, proveedores y ventas.',
-        'Control de trabajos industriales por fecha.',
-        'Reportes y cumplimiento de metas.',
-      ],
-      technologies: ['React', 'Tailwind CSS', 'Laravel', 'AdminLTE', 'MySQL'],
-    },
-    {
-      title: 'E-commerce - Tienda de Ropa',
-      description:
-        'Tienda virtual de ropa con carrito de compras y pasarela de pagos. Incluye gestión de productos, categorías y pedidos, con panel de control para administradores y reportes de ventas.',
-      image: '/assets/images/TiendaRopa/TiendaRopa-3.png',
-      images: [
-        '/assets/images/TiendaRopa/TiendaRopa-1.png',
-        '/assets/images/TiendaRopa/TiendaRopa-2.png',
-        '/assets/images/TiendaRopa/TiendaRopa-3.png',
-        '/assets/images/TiendaRopa/TiendaRopa-4.png',
-        '/assets/images/TiendaRopa/TiendaRopa-5.png',
-        '/assets/images/TiendaRopa/TiendaRopa-6.png',
-        '/assets/images/TiendaRopa/TiendaRopa-7.png',
-      ],
-      features: [
-        'Catálogo de productos con filtros y búsqueda.',
-        'Carrito de compras con pasarela de pagos.',
-        'Gestión de productos y categorías.',
-        'Panel de control para administradores.',
-      ],
-      technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
-    },
-    {
-      title: 'Blog - Blog de Tecnología',
-      description:
-        'Blog de tecnología con publicación de artículos y comentarios. Incluye gestión de usuarios, roles y permisos, con panel de control para administradores y reportes de interacciones.',
-      image: '/assets/images/BlogTecnologia/BlogTecnologia-3.png',
-      images: [
-        '/assets/images/BlogTecnologia/BlogTecnologia-1.png',
-        '/assets/images/BlogTecnologia/BlogTecnologia-2.png',
-        '/assets/images/BlogTecnologia/BlogTecnologia-3.png',
-        '/assets/images/BlogTecnologia/BlogTecnologia-4.png',
-        '/assets/images/BlogTecnologia/BlogTecnologia-5.png',
-        '/assets/images/BlogTecnologia/BlogTecnologia-6.png',
-        '/assets/images/BlogTecnologia/BlogTecnologia-7.png',
-      ],
-      features: [
-        'Publicación de artículos y comentarios.',
-        'Gestión de usuarios, roles y permisos.',
-        'Panel de control para administradores.',
-        'Reportes de interacciones y comentarios.',
-      ],
-      technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
-    },
-    {
-      title: 'Red Social - Red de Amigos',
-      description:
-        'Red social de amigos con publicación de estados y fotos. Incluye gestión de perfiles, solicitudes de amistad y mensajes privados, con panel de control para administradores y reportes de interacciones.',
-      image: '/assets/images/RedAmigos/RedAmigos-3.png',
-      images: [
-        '/assets/images/RedAmigos/RedAmigos-1.png',
-        '/assets/images/RedAmigos/RedAmigos-2.png',
-        '/assets/images/RedAmigos/RedAmigos-3.png',
-        '/assets/images/RedAmigos/RedAmigos-4.png',
-        '/assets/images/RedAmigos/RedAmigos-5.png',
-        '/assets/images/RedAmigos/RedAmigos-6.png',
-        '/assets/images/RedAmigos/RedAmigos-7.png',
-      ],
-      features: [
-        'Publicación de estados y fotos.',
-        'Gestión de perfiles y solicitudes de amistad.',
-        'Mensajes privados y notificaciones en tiempo real.',
-        'Panel de control para administradores.',
-      ],
-      technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
-    },
-    {
-      title: 'Dashboard para medir el volumen de ventas y alcance de estas por el mundo',
-      description:
-        'Dashboard interactivo con métricas clave para la toma de decisiones en tiempo real. Incluye gráficos, tablas y mapas con filtros y segmentación de datos, con actualización automática desde la base de datos Nortwind usado para pruebas.',
-      image: '/assets/images/PowerBI/PowerBI-3.png',
-      images: [
-        '/assets/images/PowerBI/PowerBI-1.png',
-        '/assets/images/PowerBI/PowerBI-2.png',
-        '/assets/images/PowerBI/PowerBI-3.png',
-        '/assets/images/PowerBI/PowerBI-4.png',
-        '/assets/images/PowerBI/PowerBI-5.png',
-        '/assets/images/PowerBI/PowerBI-6.png',
-        '/assets/images/PowerBI/PowerBI-7.png',
-      ],
-      features: [
-        'Dashboard interactivo con métricas clave.',
-        'Gráficos, tablas y mapas con filtros.',
-        'Segmentación de datos y actualización automática.',
-        'Conexión a base de datos Nortwind para pruebas.',
-      ],
-      technologies: ['Power BI', 'SQL Server', 'SQL Server Management Studio'],
-
-    }
-    
-  ];
+const ProjectVisual = ({ project }) => {
+  if (project.image) {
+    return (
+      <img
+        src={project.image}
+        alt={project.title}
+        className="h-56 w-full rounded-2xl object-cover object-top"
+      />
+    );
+  }
 
   return (
-    <section className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800">Proyectos</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 duration-300"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-60 object-cover cursor-pointer rounded-t-2xl transition-transform transform hover:scale-105"
-                onClick={() => setSelectedImage(project.image)}
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800">{project.title}</h3>
-                <p className="mt-3 text-gray-600">{project.description}</p>
-                <ul className="mt-3 space-y-1 text-gray-700">
-                  {project.features.map((feature, i) => (
-                    <li key={i} className="flex items-center">
-                      <span className="text-green-500 mr-2">✔️</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full"
-                    >
+    <div className="grid h-56 w-full place-items-center rounded-2xl border border-cyan-300/20 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.25),transparent_32%),linear-gradient(135deg,rgba(15,23,42,1),rgba(30,41,59,1))] p-6 text-center">
+      <div>
+        <span className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-cyan-300/10 text-3xl text-cyan-300">
+          <i className="bi bi-stars" />
+        </span>
+        <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-cyan-200">{project.category}</p>
+      </div>
+    </div>
+  );
+};
+
+const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [expandedImage, setExpandedImage] = useState(null);
+
+  return (
+    <section className="bg-slate-950 px-5 pt-32 pb-20 text-white lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Proyectos</p>
+          <h1 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">Casos destacados</h1>
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            Selección de proyectos y mejoras realizadas en entornos empresariales: desarrollo web, automatización, inteligencia artificial, dashboards y soporte de sistemas.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-7 md:grid-cols-2">
+          {projects.map((project) => (
+            <article key={project.title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:border-cyan-300/40">
+              <ProjectVisual project={project} />
+              <div className="p-2 pt-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-cyan-300">{project.category}</p>
+                <h2 className="mt-3 text-2xl font-black text-white">{project.title}</h2>
+                <p className="mt-3 font-semibold text-emerald-300">{project.impact}</p>
+                <p className="mt-4 leading-7 text-slate-300">{project.description}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="rounded-full bg-slate-900 px-3 py-1.5 text-xs font-medium text-slate-200">
                       {tech}
                     </span>
                   ))}
                 </div>
+
                 <button
-                  onClick={() => setSelectedImages(project.images)}
-                  className="block mt-6 text-indigo-600 hover:text-indigo-800 font-semibold"
+                  type="button"
+                  onClick={() => setSelectedProject(project)}
+                  className="mt-6 rounded-2xl border border-cyan-300/30 bg-cyan-300/10 px-5 py-3 font-bold text-cyan-200 transition hover:bg-cyan-300 hover:text-slate-950"
                 >
-                  Ver detalles →
+                  Ver detalles
                 </button>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
 
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex justify-center items-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative w-auto max-w-6xl max-h-[95vh] flex justify-center items-center">
-            <img
-              src={selectedImage}
-              alt="Imagen ampliada"
-              className="max-h-[95vh] max-w-full rounded-lg object-contain shadow-2xl"
-            />
-            <button
-              className="absolute top-4 right-4 text-white text-3xl cursor-pointer bg-black bg-opacity-50 rounded-full px-3"
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
-          </div>
-        </div>
-      )}
+      {selectedProject && (
+        <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm" onClick={() => setSelectedProject(null)}>
+          <div className="max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-white/10 bg-slate-950 p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-widest text-cyan-300">{selectedProject.category}</p>
+                <h2 className="mt-2 text-3xl font-black text-white">{selectedProject.title}</h2>
+                <p className="mt-3 font-semibold text-emerald-300">{selectedProject.impact}</p>
+              </div>
+              <button className="rounded-full bg-white/10 px-3 py-2 text-xl text-white hover:bg-white/20" onClick={() => setSelectedProject(null)}>
+                ×
+              </button>
+            </div>
 
-      {selectedImages && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex justify-center items-center z-50 p-4"
-          onClick={() => setSelectedImages(null)}
-        >
-          <div
-            className="relative bg-gray-800 p-4 rounded-lg max-w-6xl max-h-[90vh] overflow-y-auto w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="absolute top-4 right-4 text-white text-3xl cursor-pointer bg-black bg-opacity-50 rounded-full px-3"
-              onClick={() => setSelectedImages(null)}
-            >
-              ×
-            </button>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {selectedImages.map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  alt={`Imagen ${i + 1}`}
-                  className="w-full h-auto rounded-lg object-cover cursor-pointer shadow-lg"
-                  onClick={() => setExpandedImage(img)}
-                />
-              ))}
+            <p className="mt-5 leading-7 text-slate-300">{selectedProject.description}</p>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                <h3 className="font-black text-white">Características</h3>
+                <ul className="mt-4 space-y-3 text-slate-300">
+                  {selectedProject.features.map((feature) => (
+                    <li key={feature} className="flex gap-3">
+                      <i className="bi bi-check-circle-fill mt-1 text-cyan-300" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                {selectedProject.images.length > 0 ? (
+                  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {selectedProject.images.map((img) => (
+                      <button key={img} type="button" onClick={() => setExpandedImage(img)} className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]">
+                        <img src={img} alt={selectedProject.title} className="h-40 w-full object-cover object-top transition hover:scale-105" />
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid min-h-60 place-items-center rounded-2xl border border-dashed border-cyan-300/30 bg-cyan-300/5 p-8 text-center">
+                    <div>
+                      <i className="bi bi-image text-4xl text-cyan-300" />
+                      <p className="mt-4 text-slate-300"></p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
       )}
 
       {expandedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex justify-center items-center z-50 p-4"
-          onClick={() => setExpandedImage(null)}
-        >
-          <div className="relative w-auto max-w-6xl max-h-[95vh] flex justify-center items-center">
-            <img
-              src={expandedImage}
-              alt="Imagen ampliada"
-              className="max-h-[95vh] max-w-full rounded-lg object-contain shadow-2xl"
-            />
-            <button
-              className="absolute top-4 right-4 text-white text-3xl cursor-pointer bg-black bg-opacity-50 rounded-full px-3"
-              onClick={() => setExpandedImage(null)}
-            >
+        <div className="fixed inset-0 z-[90] flex items-center justify-center bg-black/90 p-4" onClick={() => setExpandedImage(null)}>
+          <div className="relative max-h-[95vh] max-w-6xl">
+            <img src={expandedImage} alt="Captura ampliada" className="max-h-[95vh] w-auto rounded-2xl object-contain" />
+            <button className="absolute right-3 top-3 rounded-full bg-black/60 px-4 py-2 text-2xl text-white" onClick={() => setExpandedImage(null)}>
               ×
             </button>
           </div>

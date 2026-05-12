@@ -1,11 +1,16 @@
+import { Link } from 'react-router-dom';
+
 export default function NotFound() {
-    return (
-      <div className="flex flex-col items-center justify-center h-screen text-center">
-        <h1 className="text-6xl font-bold text-red-600">404</h1>
-        <p className="text-xl mt-4">Oops! Página no encontrada.</p>
-        <a href="/" className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-lg">
+  return (
+    <section className="grid min-h-screen place-items-center bg-slate-950 px-5 text-center text-white">
+      <div>
+        <p className="text-8xl font-black text-cyan-300">404</p>
+        <h1 className="mt-4 text-3xl font-black">Página no encontrada</h1>
+        <p className="mt-3 max-w-md text-slate-400">La ruta que intentas abrir no existe o fue movida.</p>
+        <Link to="/" className="mt-8 inline-flex rounded-2xl bg-cyan-300 px-6 py-3 font-black text-slate-950 transition hover:bg-cyan-200">
           Volver al inicio
-        </a>
+        </Link>
       </div>
-    );
-  }
+    </section>
+  );
+}
