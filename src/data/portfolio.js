@@ -8,7 +8,7 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/nefi-avila',
   github: 'https://github.com/amnefi',
   whatsapp: 'https://wa.me/51994257764',
-  cv: '/CV-Fabrizio-Avila.pdf',
+  cv: '/1. CV - Fabrizio Avila.pdf',
 };
 
 export const highlights = [
