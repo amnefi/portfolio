@@ -1,27 +1,20 @@
-import "./App.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useLocation } from 'react-router-dom';
+import Header from './Layouts/Header';
+import Footer from './Layouts/Footer';
+import Body from './Layouts/Body';
 
-import { useLocation } from "react-router-dom"; // Importa useLocation
-import Header from "./Layouts/Header";
-import Footer from "./Layouts/Footer";
-import Body from "./Layouts/Body";
-import NotFound from "./Pages/NotFound"; // Importa NotFound
-
+const validPaths = ['/', '/about', '/services', '/skills', '/projects', '/contact'];
 
 function App() {
-  const location = useLocation(); // Obtiene la ruta actual
-  const isNotFound = location.pathname !== "/" && 
-                     location.pathname !== "/about" && 
-                     location.pathname !== "/services" &&
-                     location.pathname !== "/contact" && 
-                     location.pathname !== "/skills" &&
-                     location.pathname !== "/projects";
+  const location = useLocation();
+  const showLayout = validPaths.includes(location.pathname);
 
   return (
     <>
-      {!isNotFound && <Header />}  {/* No muestra Header en 404 */}
-      {isNotFound ? <NotFound /> : <Body />}
-      {!isNotFound && <Footer />}  {/* No muestra Footer en 404 */}
+      {showLayout && <Header />}
+      <Body />
+      {showLayout && <Footer />}
     </>
   );
 }
