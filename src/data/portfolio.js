@@ -1,73 +1,138 @@
 export const profile = {
   name: 'Nefi Fabrizio Avila M.',
-  shortName: 'Nefi Avila',
-  role: 'Profesional TI | Soporte Técnico | Automatización | Backend Junior',
+  shortName: 'Fabrizio Avila',
+  role: 'Software Developer & Business Systems',
+  tagline: 'Construyo software para resolver procesos reales de empresas.',
+  summary:
+    'Desarrollo aplicaciones y sistemas internos orientados a digitalizar procesos, centralizar información y mejorar operaciones empresariales.',
   location: 'Piura, Perú',
   phone: '+51 994 257 764',
   email: 'avila.nefi1280@gmail.com',
   linkedin: 'https://linkedin.com/in/nefi-avila',
   github: 'https://github.com/amnefi',
   whatsapp: 'https://wa.me/51994257764',
-  cv: '/1. CV - Fabrizio Avila.pdf',
+  cv: '/Fabrizio-Avila-CV.pdf',
 };
 
-export const highlights = [
+export const valueProps = [
   {
-    metric: '45%',
-    label: 'mejora en conversión comercial',
-    description: 'Automatización de atención al cliente mediante chatbot con inteligencia artificial.',
+    title: 'Software aplicado al negocio',
+    description: 'Sistemas internos construidos a partir de necesidades reales de operación, no solo proyectos académicos.',
+    icon: 'bi-window-stack',
   },
   {
-    metric: '40%',
-    label: 'optimización de gestión interna',
-    description: 'Sistema web para control de inventarios, materiales, herramientas y procesos.',
+    title: 'TI + procesos empresariales',
+    description: 'Experiencia directa en Sistemas, ERP, producción, inventarios, almacén y logística.',
+    icon: 'bi-diagram-3',
   },
   {
-    metric: 'TI + Datos',
-    label: 'perfil híbrido',
-    description: 'Soporte técnico, automatización, dashboards, cloud y desarrollo backend.',
+    title: 'Implementación y soporte',
+    description: 'Acompañamiento a usuarios, permisos, incidencias, documentación y adopción de nuevas herramientas.',
+    icon: 'bi-people',
   },
 ];
 
 export const services = [
   {
-    title: 'Soporte técnico y Help Desk',
-    icon: 'bi-headset',
-    description: 'Atención de incidencias de hardware, software, laptops corporativas y soporte a usuarios internos.',
-  },
-  {
-    title: 'Automatización de procesos',
-    icon: 'bi-lightning-charge',
-    description: 'Optimización de tareas repetitivas, reportes de asistencia, horas extras e incidencias operativas.',
-  },
-  {
-    title: 'Desarrollo de sistemas web',
+    title: 'Desarrollo de software',
     icon: 'bi-code-slash',
-    description: 'Creación de soluciones web para administración, inventarios, trazabilidad y mejora de procesos internos.',
+    description:
+      'Aplicaciones web y sistemas internos orientados a resolver procesos empresariales, centralizar información y reducir tareas manuales.',
   },
   {
-    title: 'Dashboards e inteligencia de negocios',
-    icon: 'bi-bar-chart-line',
-    description: 'Diseño de tableros en Power BI para analizar rentabilidad, avance de proyectos e indicadores clave.',
+    title: 'Sistemas empresariales',
+    icon: 'bi-boxes',
+    description:
+      'Digitalización de procesos relacionados con ERP, producción, inventarios, logística, trazabilidad y operaciones internas.',
   },
   {
-    title: 'Cloud y herramientas colaborativas',
-    icon: 'bi-cloud-check',
-    description: 'Gestión básica de Microsoft 365, Google Workspace, almacenamiento en la nube, usuarios y permisos.',
-  },
-  {
-    title: 'DevOps Junior',
-    icon: 'bi-diagram-3',
-    description: 'Conocimientos en CI/CD, Docker, Git, Linux, Azure y AWS para automatizar el ciclo de vida del software.',
+    title: 'TI y soporte',
+    icon: 'bi-headset',
+    description:
+      'Soporte técnico, administración de usuarios, accesos, herramientas cloud y acompañamiento funcional a usuarios.',
   },
 ];
 
 export const projects = [
   {
-    title: 'Sistema web de gestión interna - Dakar G',
-    category: 'Desarrollo web',
-    impact: 'Optimización del 40% en la gestión de materiales y herramientas.',
-    description: 'Sistema interno para mejorar la administración de inventarios, trabajadores, proveedores, ventas, trabajos pendientes y trazabilidad documental.',
+    slug: 'produccion-inventarios-logistica',
+    title: 'Sistema de Producción, Inventarios y Logística',
+    company: 'Amara Foods',
+    category: 'Sistema empresarial / MRP',
+    featured: true,
+    image: '/assets/images/MRP/dashboard.webp',
+    images: [
+      '/assets/images/MRP/dashboard.webp',
+      '/assets/images/MRP/productividad.webp',
+      '/assets/images/MRP/stock.webp',
+      '/assets/images/MRP/traslados.webp',
+      '/assets/images/MRP/incidencias.webp',
+      '/assets/images/MRP/almacenes.webp',
+    ],
+    summary:
+      'Sistema interno para centralizar procesos de producción, productividad, materiales, inventarios y logística en una sola plataforma.',
+    context:
+      'El proyecto evolucionó a partir de necesidades reales de operación. Durante mi trabajo en Almacén y Logística identifiqué flujos que requerían mayor control, trazabilidad y centralización de información.',
+    problem:
+      'La operación requería consultar y registrar información distribuida entre producción, materiales, almacenes, lotes, pallets y movimientos, dificultando la trazabilidad y el seguimiento operativo.',
+    solution:
+      'Se construyó una aplicación web que reúne producción, inventario y logística, con controles por sede, lote, pallet, almacén y usuario, además de reportes e históricos.',
+    role:
+      'Análisis de necesidades, diseño de flujos, desarrollo de funcionalidades y validación desde la operación real del área.',
+    features: [
+      'Producción por contenedor y consolidación de materiales.',
+      'Indicadores de productividad, eficacia, rendimientos, merma y horas trabajadas.',
+      'Gestión de materiales, productos, recetas y versiones.',
+      'Stock por lote, pallet, almacén y sede.',
+      'Entradas, salidas y traslados entre almacenes y pallets.',
+      'Packing Lists e importación de información desde Excel.',
+      'Auditoría e histórico de movimientos por usuario y fecha.',
+      'Incidencias, gestión de almacenes, usuarios, roles y permisos.',
+    ],
+    technologies: ['React', 'Excel', 'Dashboard', 'Trazabilidad'],
+    highlights: ['Trazabilidad operativa', 'Gestión multi-sede', 'Auditoría de movimientos', 'Flujos basados en operación real'],
+  },
+  {
+    slug: 'control-activos-ti',
+    title: 'Sistema de Gestión de Entrega y Devolución de Equipos',
+    company: 'Amara Foods',
+    category: 'Activos TI / Sistema interno',
+    featured: true,
+    image: '/assets/images/ActivosTI/cargo-entrega.webp',
+    images: [
+      '/assets/images/ActivosTI/cargo-entrega.webp',
+      '/assets/images/ActivosTI/historial.webp',
+      '/assets/images/ActivosTI/devolucion.webp',
+    ],
+    summary:
+      'Aplicación interna para digitalizar la asignación, trazabilidad y devolución de equipos tecnológicos a colaboradores.',
+    context:
+      'La gestión de cargos de equipos necesitaba una forma más ordenada de registrar entregas, devoluciones, responsables, estado de los activos y documentación de conformidad.',
+    problem:
+      'El proceso requería centralizar la información del colaborador y del activo, mantener historial y generar documentos consistentes para cada entrega y devolución.',
+    solution:
+      'Desarrollé una aplicación que gestiona el ciclo completo del activo, desde la entrega hasta la devolución, con persistencia en base de datos y generación de documentos PDF.',
+    role:
+      'Análisis del proceso, diseño de interfaz, modelado de la información, desarrollo de la aplicación y generación de documentos de conformidad.',
+    features: [
+      'Cargos de entrega y devolución vinculados.',
+      'Múltiples equipos por cargo.',
+      'Serie, IMEI, código patrimonial, estado y accesorios.',
+      'Datos del colaborador y responsables de entrega/recepción.',
+      'Historial de entregas y devoluciones.',
+      'Registro en MySQL.',
+      'Generación automática de documentos PDF.',
+      'Condiciones y firmas de conformidad.',
+    ],
+    technologies: ['React', 'MySQL', 'Generación PDF', 'Gestión de activos'],
+    highlights: ['Trazabilidad de activos', 'Documentación automática', 'Historial de cargos', 'Entrega y devolución'],
+  },
+  {
+    slug: 'gestion-interna-dakar',
+    title: 'Sistema web de gestión interna',
+    company: 'Dakar G E.I.R.L.',
+    category: 'Sistema de gestión empresarial',
+    featured: false,
     image: '/assets/images/DakarG/DakarG-3.png',
     images: [
       '/assets/images/DakarG/DakarG-1.png',
@@ -78,69 +143,98 @@ export const projects = [
       '/assets/images/DakarG/DakarG-6.png',
       '/assets/images/DakarG/DakarG-7.png',
     ],
-    features: [
-      'Control de materiales, herramientas y procesos internos.',
-      'Gestión administrativa y operativa centralizada.',
-      'Mejora en trazabilidad documental y seguimiento de actividades.',
+    summary:
+      'Dakar G no contaba con un sistema para centralizar la gestión de sus procesos internos. Desarrollé una aplicación web para organizar materiales, herramientas, trabajadores, proveedores, ventas y trabajos pendientes en una sola plataforma.',
+    context:
+      'La empresa necesitaba pasar de una operación sin un sistema centralizado a una herramienta que permitiera reunir información administrativa y operativa, facilitar su consulta y mejorar el seguimiento de las actividades.',
+    problem:
+      'No existía una plataforma que integrara la gestión de materiales, herramientas, trabajadores, proveedores, ventas y trabajos pendientes. Esto dificultaba mantener una visión unificada de la operación y dar seguimiento a la información relacionada con cada proceso.',
+    solution:
+      'Desarrollé un sistema web de gestión interna que centralizó los principales procesos administrativos y operativos, incorporando módulos de inventario, personal, proveedores, ventas y seguimiento de trabajos. Complementé la solución con dashboards en Power BI para visualizar rentabilidad y avance de proyectos.',
+    role:
+      'Levantamiento de necesidades, definición de flujos, diseño de la solución, desarrollo del sistema web, estructuración de la información y creación de dashboards para seguimiento.',
+    process: [
+      {
+        title: '1. Identificación de necesidades',
+        description: 'Revisé los procesos que requerían mayor control y definí qué información debía centralizarse dentro del sistema.',
+      },
+      {
+        title: '2. Estructuración de módulos',
+        description: 'Organicé la solución por áreas funcionales: inventarios, materiales, herramientas, trabajadores, proveedores, ventas y trabajos pendientes.',
+      },
+      {
+        title: '3. Desarrollo de la plataforma',
+        description: 'Implementé la aplicación web y los flujos necesarios para registrar, consultar y dar seguimiento a la información operativa.',
+      },
+      {
+        title: '4. Centralización y trazabilidad',
+        description: 'Concentré la información en una única plataforma para facilitar el seguimiento administrativo y operativo.',
+      },
+      {
+        title: '5. Visualización para seguimiento',
+        description: 'Complementé el sistema con dashboards en Power BI para visualizar rentabilidad y avance de proyectos.',
+      },
     ],
-    technologies: ['React', 'Tailwind CSS', 'Laravel', 'MySQL', 'AdminLTE'],
+    outcome:
+      'La empresa pasó a contar con una plataforma centralizada para registrar y consultar sus principales procesos internos, mejorando la organización de la información y el seguimiento de la operación.',
+    features: [
+      'Gestión de materiales y herramientas.',
+      'Registro y seguimiento de trabajadores.',
+      'Gestión de proveedores.',
+      'Control y seguimiento de ventas.',
+      'Seguimiento de trabajos pendientes.',
+      'Centralización de información administrativa y operativa.',
+      'Trazabilidad documental.',
+      'Dashboards de rentabilidad y avance de proyectos.',
+    ],
+    technologies: ['React', 'Tailwind CSS', 'Laravel', 'MySQL', 'Power BI'],
+    highlights: ['Gestión centralizada', 'Inventarios', 'Seguimiento operativo', 'Dashboards'],
+  },
+];
+
+export const otherImplementations = [
+  {
+    title: 'Chatbot para atención comercial',
+    description: 'Automatización de consultas y apoyo al seguimiento comercial y postventa.',
+    technologies: ['IA', 'Automatización', 'Atención al cliente'],
   },
   {
-    title: 'Chatbot con IA para atención comercial',
-    category: 'Automatización + IA',
-    impact: 'Incremento del 45% en conversión de ventas.',
-    description: 'Automatización del proceso de atención al cliente para resolver consultas frecuentes, mejorar el seguimiento y fortalecer la experiencia post venta.',
-    image: null,
-    images: [],
-    features: [
-      'Atención automatizada de consultas comerciales.',
-      'Mejora del seguimiento post venta.',
-      'Apoyo a la captación y conversión de clientes.',
-    ],
-    technologies: ['IA', 'Chatbot', 'Automatización', 'Atención al cliente'],
+    title: 'Dashboards en Power BI',
+    description: 'Tableros para analizar rentabilidad, avance y progreso de proyectos.',
+    technologies: ['Power BI', 'Business Intelligence'],
   },
   {
-    title: 'Dashboards de rentabilidad y avance de proyectos',
-    category: 'Business Intelligence',
-    impact: 'Visualización clara de rentabilidad, avance y progreso operativo.',
-    description: 'Creación de tableros en Power BI para analizar indicadores clave y apoyar la toma de decisiones administrativas y operativas.',
-    image: null,
-    images: [],
-    features: [
-      'Indicadores visuales para toma de decisiones.',
-      'Análisis de rentabilidad y progreso de proyectos.',
-      'Organización de información para seguimiento gerencial.',
-    ],
-    technologies: ['Power BI', 'SQL', 'Dashboards', 'Análisis de datos'],
-  },
-  {
-    title: 'Implementación y soporte del módulo de asistencia Buk',
-    category: 'Procesos TI / RR. HH.',
-    impact: 'Mayor confiabilidad en control de asistencia, incidencias y cierre mensual.',
-    description: 'Apoyo en la implementación, administración y soporte del sistema digital de asistencia para mejorar trazabilidad y control interno.',
-    image: null,
-    images: [],
-    features: [
-      'Control digital de asistencia del personal.',
-      'Automatización de reportes de horas extras e incidencias.',
-      'Mejora en el seguimiento y cierre mensual.',
-    ],
-    technologies: ['Buk', 'Excel', 'Reportes', 'Procesos'],
+    title: 'Implementación y soporte de Buk',
+    description: 'Acompañamiento en control de asistencia, reportes e incidencias del personal.',
+    technologies: ['Buk', 'Procesos', 'Soporte funcional'],
   },
 ];
 
 export const experience = [
   {
+    role: 'Asistente de Almacén y Logística',
+    company: 'Amara Foods S.A.C.',
+    location: 'Paita, Piura, Perú',
+    period: 'Agosto 2026 - Octubre 2026',
+    points: [
+      'Gestioné preparación y despacho de materiales entre sedes mediante picking, packing y documentación de envío.',
+      'Coordiné recepción de materiales de importación, compras, abastecimiento y retiros desde almacenes externos.',
+      'Ejecuté inventarios, controles de stock y despachos de materiales e insumos hacia Producción.',
+      'Utilicé ERP TSI como usuario funcional: registro de compras, soporte, accesos, permisos y capacitaciones.',
+      'Desarrollé e implementé el módulo de Almacén y Logística del sistema interno a partir de necesidades identificadas en la operación.',
+    ],
+  },
+  {
     role: 'Auxiliar de Sistemas',
     company: 'Amara Foods S.A.C.',
     location: 'Paita, Piura, Perú',
-    period: 'Octubre 2025 - Actual',
+    period: 'Octubre 2025 - Julio 2026',
     points: [
-      'Soporte técnico de primer nivel para incidencias de hardware y software.',
-      'Administración básica de Microsoft 365 y Google Workspace.',
-      'Gestión de almacenamiento en la nube, estructuras de carpetas y permisos por áreas.',
-      'Mantenimiento preventivo y correctivo básico de equipos de cómputo.',
-      'Documentación de incidencias y procedimientos de control de activos TI.',
+      'Brindé soporte Help Desk en hardware, software, conectividad y equipos corporativos.',
+      'Administré Microsoft 365 y Google Workspace, usuarios, accesos, almacenamiento y permisos.',
+      'Apoyé la implementación y soporte de sistemas internos como Buk y acompañé a usuarios.',
+      'Resolví una incidencia crítica de Microsoft Authenticator coordinando en inglés con soporte técnico externo.',
+      'Diseñé procedimientos de control y trazabilidad de activos TI y desarrollé la aplicación de entrega/devolución de equipos.',
     ],
   },
   {
@@ -149,10 +243,9 @@ export const experience = [
     location: 'Paita, Piura, Perú',
     period: 'Febrero 2025 - Diciembre 2025',
     points: [
-      'Control de asistencia del personal mediante sistemas digitales.',
-      'Implementación y administración del módulo de asistencia Buk.',
-      'Automatización de reportes de horas extras e incidencias.',
-      'Gestión de altas y bajas de personal en plataformas digitales SUNAT.',
+      'Gestioné el control de asistencia mediante Buk.',
+      'Automaticé reportes de horas extras e incidencias para el cierre mensual.',
+      'Gestioné altas y bajas de personal en SUNAT y apoyé la organización de información para auditoría SMETA.',
     ],
   },
   {
@@ -161,9 +254,9 @@ export const experience = [
     location: 'Paita, Piura, Perú',
     period: 'Agosto 2024 - Diciembre 2024',
     points: [
-      'Implementación de chatbot con IA para automatizar atención al cliente.',
-      'Organización de visitas estratégicas para captación de clientes.',
-      'Mejora del proceso post venta y seguimiento comercial.',
+      'Automaticé la atención de consultas mediante un chatbot con inteligencia artificial.',
+      'Gestioné inventarios, despachos y documentación comercial.',
+      'Ejecuté acciones de captación, seguimiento y postventa.',
     ],
   },
   {
@@ -172,9 +265,9 @@ export const experience = [
     location: 'Paita, Piura, Perú',
     period: 'Febrero 2024 - Marzo 2024',
     points: [
-      'Desarrollo de sistema web para inventarios y procesos internos.',
-      'Creación de dashboards en Power BI para rentabilidad y avance de proyectos.',
-      'Soporte administrativo en facturación electrónica, órdenes de servicio y cotizaciones.',
+      'Desarrollé un sistema web de gestión interna para una operación que no contaba con una plataforma centralizada, integrando inventarios y procesos administrativos.',
+      'Creé dashboards en Power BI para rentabilidad y avance de proyectos.',
+      'Apoyé procesos de facturación electrónica, órdenes de servicio, cotizaciones y seguimiento de facturas.',
     ],
   },
   {
@@ -183,39 +276,22 @@ export const experience = [
     location: 'Remoto',
     period: 'Setiembre 2022 - Febrero 2024',
     points: [
-      'Desarrollo de funcionalidades backend con Django REST Framework y Python.',
-      'Participación en tareas por sprint bajo metodología Scrum.',
-      'Pruebas de código, documentación técnica y coordinación con otras áreas.',
-      'Uso de Git para control de versiones y trabajo colaborativo.',
+      'Desarrollé funcionalidades backend con Python y Django REST Framework.',
+      'Implementé y probé funcionalidades asignadas por sprint, documentando mejoras y resolviendo incidencias.',
+      'Participé en levantamiento de requerimientos y trabajo colaborativo con Scrum y Git.',
     ],
   },
 ];
 
 export const skillGroups = [
-  {
-    title: 'Lenguajes de programación',
-    skills: ['Python', 'JavaScript', 'PHP', 'VB.NET'],
-  },
-  {
-    title: 'Frameworks y tecnologías',
-    skills: ['React', 'Django REST Framework', 'Laravel', 'Tailwind CSS'],
-  },
-  {
-    title: 'Bases de datos',
-    skills: ['PostgreSQL', 'MySQL', 'Oracle', 'MongoDB', 'Cassandra'],
-  },
-  {
-    title: 'Herramientas',
-    skills: ['Git', 'Power BI', 'Docker', 'Linux'],
-  },
-  {
-    title: 'Cloud & DevOps',
-    skills: ['Azure', 'AWS', 'Cloud Computing', 'CI/CD', 'IaaS', 'PaaS', 'SaaS'],
-  },
-  {
-    title: 'Metodologías',
-    skills: ['Scrum', 'Kanban', 'Trabajo por sprints', 'Documentación técnica'],
-  },
+  { title: 'Lenguajes', skills: ['Python', 'JavaScript', 'TypeScript', 'PHP', 'VB.NET'] },
+  { title: 'Frontend', skills: ['React', 'Tailwind CSS'] },
+  { title: 'Backend', skills: ['Django REST Framework', 'Laravel'] },
+  { title: 'Bases de datos', skills: ['PostgreSQL', 'MySQL', 'Oracle', 'MongoDB', 'Cassandra'] },
+  { title: 'Herramientas', skills: ['Git', 'Power BI', 'Docker', 'Linux'] },
+  { title: 'Cloud', skills: ['Azure', 'AWS', 'Cloud Computing'] },
+  { title: 'Sistemas empresariales', skills: ['ERP TSI', 'Microsoft 365', 'Google Workspace', 'Buk'] },
+  { title: 'Metodologías', skills: ['Scrum', 'Kanban'] },
 ];
 
 export const education = [
@@ -224,33 +300,11 @@ export const education = [
     institution: 'SENATI',
     period: 'Marzo 2021 - Diciembre 2023',
   },
-  {
-    title: 'Ingeniero de DevOps',
-    institution: 'Microsoft Azure',
-    period: 'Abril 2026 - En curso',
-  },
-  {
-    title: 'Descripción de los conceptos de la nube',
-    institution: 'Microsoft Azure',
-    period: 'Abril 2026',
-  },
-  {
-    title: 'Power BI / Business Intelligence',
-    institution: 'CENAP',
-    period: 'Setiembre 2023 - Octubre 2023',
-  },
-  {
-    title: 'Modelado y diseño de bases de datos',
-    institution: 'Oracle',
-    period: 'Mayo 2022',
-  },
 ];
 
-export const softSkills = [
-  'Resolución de problemas',
-  'Comunicación efectiva',
-  'Pensamiento analítico',
-  'Proactividad y responsabilidad',
-  'Trabajo en equipo',
-  'Aprendizaje continuo',
+export const complementaryEducation = [
+  { title: 'DevOps en Microsoft Azure', institution: 'Microsoft Azure', period: 'Mayo 2026 - Actualidad' },
+  { title: 'Conceptos de computación en la nube', institution: 'Microsoft Azure', period: 'Abril 2026' },
+  { title: 'Power BI / Business Intelligence', institution: 'CENAP', period: '2023' },
+  { title: 'Modelado y diseño de bases de datos', institution: 'Oracle', period: '2022' },
 ];
