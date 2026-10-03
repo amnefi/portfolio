@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fabrizio-avila.netlify.app/sitemap.xml

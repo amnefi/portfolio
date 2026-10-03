@@ -1,44 +1,35 @@
-# Portfolio profesional - Nefi Fabrizio Avila M.
+# Portfolio — Fabrizio Avila
 
-Portfolio hecho con **React + Vite + Tailwind CSS**.
+Portfolio profesional orientado a oportunidades en desarrollo de software, sistemas empresariales, TI y digitalización de procesos.
 
-## Ejecutar en local
+## Stack
+- React 19
+- Vite 6
+- Tailwind CSS
+- React Router
+- Framer Motion
 
+## Comandos
 ```bash
 npm install
 npm run dev
-```
-
-## Generar build
-
-```bash
 npm run build
+npm run lint
+npm run validate:routes
 ```
 
-## Editar información personal
+## Cambios principales de esta revisión
+- Nuevo posicionamiento: Software Developer & Business Systems.
+- Home orientado a reclutamiento y proyectos empresariales.
+- Nueva página de experiencia.
+- Case studies con rutas `/projects/:slug`.
+- MRP y control de activos TI como proyectos principales.
+- Stack reorganizado por categorías.
+- SEO base, sitemap, robots, manifest y favicon.
+- Soporte para rutas SPA en Netlify y Vercel.
+- Validación automática de rutas y fallbacks SPA mediante `npm run validate:routes`.
+- Descarga de CV conectada al archivo existente del repositorio.
+- Estructura preparada para incorporar capturas anonimizadas del MRP y control de activos.
 
-La información principal del portfolio está centralizada en:
-
-```txt
-src/data/portfolio.js
-```
-
-Desde ese archivo puedes actualizar:
-
-- Nombre y cargo profesional
-- Teléfono, correo, LinkedIn, GitHub y WhatsApp
-- Proyectos
-- Experiencia laboral
-- Skills
-- Educación
-- Servicios
-
-## CV
-
-El CV descargable está en:
-
-```txt
-public/CV-Fabrizio-Avila.pdf
-```
-
-El botón **Descargar CV** usa esa ruta.
+## Pendiente antes de publicar
+Revisar cada captura del sistema interno y confirmar que no contenga información empresarial que deba anonimizarse antes de hacer deploy público.

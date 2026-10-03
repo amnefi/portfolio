@@ -1,5 +1,5 @@
 export const profile = {
-  name: 'Nefi Fabrizio Avila M.',
+  name: 'Fabrizio Avila',
   shortName: 'Fabrizio Avila',
   role: 'Software Developer & Business Systems',
   tagline: 'Construyo software para resolver procesos reales de empresas.',
@@ -11,7 +11,7 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/nefi-avila',
   github: 'https://github.com/amnefi',
   whatsapp: 'https://wa.me/51994257764',
-  cv: '/Fabrizio-Avila-CV.pdf',
+  cv: '/1. CV - Fabrizio Avila.pdf',
 };
 
 export const valueProps = [
@@ -60,15 +60,8 @@ export const projects = [
     company: 'Amara Foods',
     category: 'Sistema empresarial / MRP',
     featured: true,
-    image: '/assets/images/MRP/dashboard.webp',
-    images: [
-      '/assets/images/MRP/dashboard.webp',
-      '/assets/images/MRP/productividad.webp',
-      '/assets/images/MRP/stock.webp',
-      '/assets/images/MRP/traslados.webp',
-      '/assets/images/MRP/incidencias.webp',
-      '/assets/images/MRP/almacenes.webp',
-    ],
+    image: null,
+    images: [],
     summary:
       'Sistema interno para centralizar procesos de producción, productividad, materiales, inventarios y logística en una sola plataforma.',
     context:
@@ -98,12 +91,8 @@ export const projects = [
     company: 'Amara Foods',
     category: 'Activos TI / Sistema interno',
     featured: true,
-    image: '/assets/images/ActivosTI/cargo-entrega.webp',
-    images: [
-      '/assets/images/ActivosTI/cargo-entrega.webp',
-      '/assets/images/ActivosTI/historial.webp',
-      '/assets/images/ActivosTI/devolucion.webp',
-    ],
+    image: null,
+    images: [],
     summary:
       'Aplicación interna para digitalizar la asignación, trazabilidad y devolución de equipos tecnológicos a colaboradores.',
     context:
